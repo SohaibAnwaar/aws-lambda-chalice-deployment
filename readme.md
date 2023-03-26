@@ -19,6 +19,39 @@ This is a sample project that shows how to deploy a simple API on AWS using [Cha
 3. .chalice/config.json - This file contains the configuration for the project
 4. .chalice/policy-dev.json - This file contains the IAM policy for the project
 
+# Required AWS Permissions
+1. IAMFullAccess
+2. AmazonAPIGatewayAdministrator
+3. AWSLambda_FullAccess
+
+# Steps to Give AWS Permissions
+1. Login to the AWS Console
+2. Go to IAM
+3. Click on Roles
+4. Click on Create Role
+5. Select AWS Service
+6. Select Lambda
+7. Click on Next: Permissions
+8. Search for IAMFullAccess
+9. Select IAMFullAccess
+10. Click on Next: Tags
+11. Click on Next: Review
+12. Enter a name for the role
+13. Click on Create Role
+14. Click on Roles
+15. Click on the role that was created in the previous step
+16. Click on Attach Policies
+17. Search for AmazonAPIGatewayAdministrator
+18. Select AmazonAPIGatewayAdministrator
+19. Click on Attach Policy
+20. Click on Roles
+21. Click on the role that was created in the previous step
+22. Click on Attach Policies
+23. Search for AWSLambda_FullAccess
+24. Select AWSLambda_FullAccess
+25. Click on Attach Policy
+
+
 # Code
 
 ## app.py
