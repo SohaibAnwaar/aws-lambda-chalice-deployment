@@ -1,0 +1,86 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1471020565000",
+            "Effect": "Allow",
+            "Action": [
+                "iam:AttachRolePolicy",
+                "iam:DeleteRolePolicy",
+                "iam:DetachRolePolicy",
+                "iam:CreateRole",
+                "iam:PutRolePolicy",
+                "iam:GetRole",
+                "iam:PassRole"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "Stmt1471020565001",
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:GET",
+                "apigateway:HEAD",
+                "apigateway:POST"
+            ],
+            "Resource": [
+                "arn:aws:apigateway:ap-south-1::/restapis",
+                "arn:aws:apigateway:ap-south-1::/restapis/*/resources",
+                "arn:aws:apigateway:ap-south-1::/restapis/*/resources/*"
+            ]
+        },
+        {
+            "Sid": "Stmt1471020565002",
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:DELETE"
+            ],
+            "Resource": [
+                "arn:aws:apigateway:ap-south-1::/restapis/*/resources/*"
+            ]
+        },
+        {
+            "Sid": "Stmt1471020565003",
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:POST"
+            ],
+            "Resource": [
+                "arn:aws:apigateway:ap-south-1::/restapis/*/deployments",
+                "arn:aws:apigateway:ap-south-1::/restapis/*/resources/*"
+            ]
+        },
+        {
+            "Sid": "Stmt1471020565004",
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:PUT"
+            ],
+            "Resource": [
+                "arn:aws:apigateway:ap-south-1::/restapis/*/methods/GET",
+                "arn:aws:apigateway:ap-south-1::/restapis/*/methods/GET/*",
+                "arn:aws:apigateway:ap-south-1::/restapis/*/methods/POST",
+                "arn:aws:apigateway:ap-south-1::/restapis/*/methods/POST/*",
+                "arn:aws:apigateway:ap-south-1::/restapis/*/methods/PUT",
+                "arn:aws:apigateway:ap-south-1::/restapis/*/methods/PUT/*"
+            ]
+        },
+        {
+            "Sid": "Stmt1471020565005",
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:PATCH"
+            ],
+            "Resource": [
+                "arn:aws:apigateway:ap-south-1::/restapis/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": "lambda:*",
+            "Resource": "*"
+        }
+    ]
+    }
